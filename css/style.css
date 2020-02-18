@@ -1,0 +1,183 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background:rgba(0,0,0,0.9);
+	color:#f4f4f4;
+	margin:0;
+	font-family: New Times Roman,serif;
+	text-transform: capitalize;
+}
+
+.showcase::after{
+	content:'';
+	background-image:url("../img/background.jpg");
+	background-position:center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:100vh;
+	width:100%;
+	display: block;
+	transition:all 1000ms;
+	-webkit-filter:blur(7px);
+}
+
+.showcase:hover::after{
+	-webkit-filter:blur(0px);
+	transition:all 1000ms;
+}
+
+.content{
+	position: absolute;
+	z-index:1;
+	top:10%;
+	left:50%;
+	margin-left:-145px;
+	transition:all 1000ms;
+	height:350px;
+	width:300px;
+}
+
+.content .title{
+	text-align: center;
+	margin-top:7rem;
+	text-shadow:1px 0 5px black;
+}
+
+/*.content .logo img{
+	width:75px;
+}*/
+
+.center{
+	text-align:center;
+	margin: 0 auto;
+}
+
+.container{
+	max-width:900px;
+	padding:4rem 1rem;
+	margin:auto;
+	overflow:hidden;
+}
+
+.bg-light{
+	background:#f4f4f4;
+	color:#333;
+}
+
+.bg-dark{
+	background:#333;
+	color:#f4f4f4;
+}
+
+@media(min-width:768px){
+	/*landing page section*/
+	.content .title h1{
+		font-size:3em;
+		text-transform:uppercase;
+	}
+	
+	/*services section*/
+	
+	.container{
+		max-width:900px;
+		padding:7rem 1rem;
+		margin:auto;
+		overflow:hidden;
+	}
+	
+	.grid-3{
+		display:grid;
+		grid-gap:2rem;
+		grid-template-columns:repeat(3,1fr);
+	}
+	
+	.grid-3 .icon h3{
+		font-size:1.5em;
+		text-transform:uppercase;
+	}
+	
+	.grid-3 .icon p{
+		font-size:1em;
+	}
+	.grid-3 .icon .youtube,
+	.grid-3 .icon .camera,
+	.grid-3 .icon .freelancing{
+		font-size:4em;
+	}
+	
+	
+	/*about section*/
+
+	.grid-2{
+		display:grid;
+		grid-gap:20px;
+		grid-template-columns:repeat(2,1fr);
+	}
+	.size{
+		font-size:1.5rem;
+	}
+	.laptop{
+		font-size:10em;
+	}
+	
+	.box h3{
+		font-size:2em;
+		text-transform:uppercase;
+	}
+	.box p{
+		font-size:1.3em;	
+	}
+	
+	/*footer*/
+	
+	footer{
+		padding:6rem;
+	}
+	
+	footer p{
+		margin:0;
+		font-size:2rem;
+	}
+}
+
+@media(max-width:576px){
+	
+	/*landing page section*/
+	.content .title{
+		text-align: center;
+		margin-top:7rem;
+	}
+	
+	.content .title h1{
+		font-size:2rem;
+	}
+	
+	/*services section*/
+	
+	.container{
+		max-width:900px;
+		padding:4rem 1rem;
+		margin:auto;
+		overflow:hidden;
+	}
+	.grid-3{
+		grid-template-columns:1fr;	
+	}
+	
+	/*about section*/
+	.grid-2{
+		grid-template-columns:1fr;
+	}
+		
+	/*footer*/
+	footer{
+	padding:2.2rem;
+	}
+	
+	footer p{
+	margin:0;
+	}
+	
+}
